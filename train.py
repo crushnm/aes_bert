@@ -1,5 +1,10 @@
 """
 """
+import sys
+import io
+# 设置标准输出为UTF-8编码，解决Linux上的Unicode编码问题
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
 import logging
 import torch.utils.data as data
 import tqdm
